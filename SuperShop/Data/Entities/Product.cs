@@ -4,7 +4,7 @@ using System;
 
 namespace SuperShop.Data.Entities
 {
-    public class Product
+    public class Product:IEntity
     {
         public int Id{ get; set; }
 
@@ -30,9 +30,7 @@ namespace SuperShop.Data.Entities
         [DisplayFormat(DataFormatString = "{0:N2}", ApplyFormatInEditMode = false)]
         public double Stock { get; set; }
 
-        //public User User { get; set; } //propriedade móvel, com relação de 1 para muitos, o user pode ter muit pro..
-
-
+        public User User { get; set; } //propriedade móvel, com relação de 1 para muitos, o user pode ter muit pro..
 
     }
 }
